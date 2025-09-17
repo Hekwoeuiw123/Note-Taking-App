@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="head">
+        <div class="container head-container flex">
+            <div class="logo">
+                <h1>notemaking</h1>
+            </div>
+            <div class="toggle">
+                <button id="themeToggle"><i class="fa-solid fa-moon" style="color: #7873f5;"></i></button>
+            </div>
+        </div>
+    </header>
+    <div class="search-container container">
+        <div class="search flex">
+            <input type="text" id="search-input">
+            <select name="" id="select-tag">
+                <option value="-1">Select Item</option>
+                <option value="all">All</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="idea">Idea</option>
+                <option value="reminder">Reminder</option>
+            </select>
+            <button id="search-btn">Search <i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
+    <div class="wrapper-container container flex">
+        <div class="wrapper-main">
+            <div class="wrapper flex">
+                <div class="add-note flex">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div class="wrapper-text">
+                    <h2>Add Notes</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Popup ForShowing the Note Detail -->
+    <!-- View Note Popup -->
+    <div class="view-note-wrapper">
+        <div class="view-note-container">
+            <button class="close-view" id="closeView">&times;</button>
+            <h2 id="viewTitle"></h2>
+            <p id="viewMessage"></p>
+            <span id="viewTag"></span>
+            <p class="view-date" id="viewDate"></p>
+        </div>
+    </div>
+
+    <div class="note-content-wrapper">
+        <div class="content-container flex">
+            <form action="" class="note-content flex">
+                <h2>New Note</h2>
+                <div class="note-taking">
+
+                    <div class="note-take-main flex">
+                        <label for="title">Title</label>
+                        <input type="text" placeholder="Enter Your Title" class="title" id="title">
+                        <label for="message">Content</label>
+                        <textarea placeholder="Enter Your Note" class="message" id="message"></textarea>
+                    </div>
+                </div>
+                <div class="tag-section">
+                    <label>Tags</label>
+                    <div class="tag-container flex">
+                        <label class="tag-option">
+                            <input type="radio" id="work" class="tag-radio" value="work" name="noteTag">
+                            <span class="tag-label tag-work">
+                                <i class="fa-solid fa-briefcase"></i> Work
+                            </span>
+                        </label>
+                        <label class="tag-option">
+                            <input type="radio" id="personal" class="tag-radio" value="personal" name="noteTag">
+                            <span class="tag-label tag-personal">
+                                <i class="fa-solid fa-user"></i> Personal
+                            </span>
+                        </label>
+                        <label class="tag-option">
+                            <input type="radio" id="idea" class="tag-radio" value="idea" name="noteTag">
+                            <span class="tag-label tag-idea">
+                                <i class="fa-solid fa-lightbulb"></i> Idea
+                            </span>
+                        </label>
+                        <label class="tag-option">
+                            <input type="radio" id="reminder" class="tag-radio" value="reminder" name="noteTag">
+                            <span class="tag-label tag-rem">
+                                <i class="fa-solid fa-bell"></i> Reminder
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <button id="submit" type="submit" class="btn">Submit</button> <button id="close"
+                        class="btn">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
